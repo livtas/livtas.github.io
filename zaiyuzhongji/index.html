@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在雨中吉他谱-经典怀旧歌曲吉他指弹与六线谱下载指南</title>
+    <meta name="description" content="本站提供《在雨中》吉他谱查询、六线谱分析及弹奏技巧教学。包含简谱与指弹谱下载资源，帮助吉他爱好者掌握这首经典怀旧歌曲的演奏方法。">
+    <meta name="keywords" content="在雨中吉他谱, 在雨中六线谱, 在雨中指弹谱, 张学友吉他谱, 经典老歌吉他谱">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        /* Left Content */
+        .main-article {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .song-meta {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .song-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            color: var(--primary-color);
+        }
+
+        .chord-diagram {
+            width: 100%;
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        .chord-diagram img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .lyrics-block {
+            margin-top: 30px;
+        }
+
+        .lyrics-line {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+
+        .chord-marker {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            font-size: 0.85rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        .tips-list {
+            margin-top: 30px;
+        }
+
+        .tips-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tips-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .download-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 15px;
+            background-color: #f1f2f6;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+
+        .download-btn:hover {
+            background-color: #e1e2e6;
+        }
+
+        .download-btn span {
+            font-weight: 500;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background-color: #ccc;
+            color: #fff;
+        }
+
+        .badge.new { background-color: #27ae60; }
+        .badge.pop { background-color: #e67e22; }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-article {
+                padding: 25px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+            <span>谱</span>典吉他
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">热门曲谱</a></li>
+                <li><a href="#">指弹教学</a></li>
+                <li><a href="#">曲库分类</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>在雨中</h1>
+    <p>张学友经典代表作，情感细腻的抒情佳作。本站提供高清吉他六线谱与指弹谱资源，助您完美演绎这首感人至深的歌曲。</p>
+    <a href="#download" class="btn">立即查看谱子</a>
+</section>
+
+<div class="container">
+    <div class="content-grid">
+        <!-- Main Content -->
+        <main class="main-article" id="download">
+            <div class="song-meta">
+                <span>🎵 风格：流行 / 抒情</span>
+                <span>🎸 难度：进阶</span>
+                <span>⏱ 时长：约 4:30</span>
+            </div>
+
+            <h2 class="section-title">歌曲简介与演奏要点</h2>
+            <p>《在雨中》是张学友的代表作之一，旋律优美，情感充沛。在吉他演奏时，重点在于左手和弦转换的流畅度以及右手指法对情感氛围的把控。建议使用原调C调演奏，副歌部分可适当加入延音效果以增强感染力。</p>
+
+            <h3 class="section-title" style="font-size: 1.3rem; margin-top: 30px;">和弦走向分析</h3>
+            <p>整首歌主要基于经典的C大调指型，使用了C、Dm、Em、F、G、Am等基础和弦。副歌部分从G和弦转为Em和弦时，跨度较大，建议使用“根音移动法”或“保留指法”来降低转换难度。</p>
+
+            <div class="chord-diagram">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='300' viewBox='0 0 600 300'%3E%3Crect width='600' height='300' fill='%23f4f4f4'/%3E%3Ctext x='300' y='150' font-family='monospace' font-size='24' fill='%23333' text-anchor='middle'%3E[C调标准指型图预览]%3C/text%3E%3C/svg%3E" alt="和弦指型示意图" onerror="this.style.display='none'">
+                <p style="text-align: center; color: #666; margin-top: 10px;">*(此处展示标准吉他指型图，包含C、Dm、Em、F、G、Am和弦)*</p>
+            </div>
+
+            <h3 class="section-title" style="font-size: 1.3rem; margin-top: 30px;">歌词与和弦对照</h3>
+            <div class="lyrics-block">
+                <div class="lyrics-line"><span class="chord-marker">C</span>在雨中 我送过你</div>
+                <div class="lyrics-line"><span class="chord-marker">Em</span>在伞下 我等过你</div>
+                <div class="lyrics-line"><span class="chord-marker">F</span>在雨中 我牵过你</div>
+                <div class="lyrics-line"><span class="chord-marker">C</span>在伞下 我吻过你</div>
+                <div class="lyrics-line"><span class="chord-marker">C</span>在雨中 我送过你</div>
+                <div class="lyrics-line"><span class="chord-marker">Em</span>在伞下 我等过你</div>
+                <div class="lyrics-line"><span class="chord-marker">F</span>在雨中 我牵过你</div>
+                <div class="lyrics-line"><span class="chord-marker">C</span>在伞下 我吻过你</div>
+            </div>
+
+            <h3 class="section-title" style="font-size: 1.3rem; margin-top: 30px;">演奏技巧提示</h3>
+            <ul class="tips-list">
+                <li><strong>指法建议：</strong> 主歌部分使用分解和弦（下、上、下、上），副歌部分转为扫弦，力度随情绪起伏变化。</li>
+                <li><strong>节奏控制：</strong> 注意切分音的处理，特别是“在雨中”三个字的重音位置，保持律动的稳定性。</li>
+                <li><strong>情感表达：</strong> 右手触弦要轻柔，模仿下雨的细腻感，不要过于生硬。</li>
+                <li><strong>转调处理：</strong> 原曲为降B调，若按C调演奏需降低半音，注意琴弦张力变化。</li>
+            </ul>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">谱子下载</h3>
+                <div class="download-options">
+                    <a href="#" class="download-btn">
+                        <span>高清六线谱 (PDF)</span>
+                        <span class="badge pop">热门</span>
+                    </a>
+                    <a href="#" class="download-btn">
+                        <span>简易和弦版 (JPG)</span>
+                        <span class="badge">推荐</span>
+                    </a>
+                    <a href="#" class="download-btn">
+                        <span>指弹独奏谱 (PDF)</span>
+                        <span class="badge new">进阶</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">相关推荐</h3>
+                <ul style="font-size: 0.9rem; color: #555;">
+                    <li style="margin-bottom: 10px;"><a href="#">张学友吉他精选集</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#">经典老歌指弹改编</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#">C调流行歌曲大全</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#">情感类歌曲弹奏技巧</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-card" style="background-color: #fff3cd; border: 1px solid #ffeeba;">
+                <h3 class="sidebar-title" style="color: #856404;">温馨提示</h3>
+                <p style="font-size: 0.85rem; color: #856404;">请确保您的设备已安装PDF阅读器或图片查看器。下载谱子仅供学习交流使用，请勿用于商业用途。</p>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>谱典吉他</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6;">致力于为吉他爱好者提供最专业、最全面的吉他谱资源与教学指南。让音乐触手可及。</p>
+        </div>
+        <div class="footer-col">
+            <h4>快速导航</h4>
+            <ul>
+                <li><a href="#">热门曲谱</a></li>
+                <li><a href="#">最新更新</a></li>
+                <li><a href="#">曲谱分类</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>资源分类</h4>
+            <ul>
+                <li><a href="#">流行歌曲</a></li>
+                <li><a href="#">指弹独奏</a></li>
+                <li><a href="#">民谣弹唱</a></li>
+                <li><a href="#">和弦教程</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>联系与合作</h4>
+            <ul>
+                <li><a href="#">投稿建议</a></li>
+                <li><a href="#">版权声明</a></li>
+                <li><a href="#">友情链接</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 谱典吉他资源站. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
