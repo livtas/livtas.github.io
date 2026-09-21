@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="黑龙江省地震局官方网站，提供黑龙江省地震监测预警、地震科普宣传、防震减灾政策法规、应急避难指南及震情信息通报服务。">
+    <meta name="keywords" content="黑龙江省地震局, 黑龙江地震, 地震监测, 地震预警, 防震减灾, 地震科普">
+    <title>黑龙江省地震局-地震监测预警与防震减灾服务平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #004494;
+            --accent-color: #e63946;
+            --bg-light: #f8f9fa;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --border-color: #dee2e6;
+            --white: #ffffff;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            font-size: 14px;
+            padding: 8px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-main {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        .main-nav a {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        .main-nav a:hover::after,
+        .main-nav a.active::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: var(--white);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 700px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .quick-alert-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .alert-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #ffeb3b;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .alert-list {
+            font-size: 14px;
+        }
+
+        .alert-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .alert-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #ffeb3b;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h3 {
+            font-size: 28px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h3::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #e3f2fd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .feature-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* Data & Info */
+        .info-section {
+            background-color: var(--white);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-card {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            padding: 30px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .info-card h4 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .info-list li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Table Styles */
+        .data-table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f1f3f5;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status-normal {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .status-warning {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #b0b0b0;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h5 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-top {
+                display: none;
+            }
+
+            .header-main {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .logo-area {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main-nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部信息条 -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <span>关注地震安全，共建平安龙江</span>
+                <span>应急值守电话：0451-82669834</span>
+            </div>
+        </div>
+        <div class="container header-main">
+            <div class="logo-area">
+                <div class="logo-text">
+                    <h1>黑龙江省地震局</h1>
+                    <span>黑龙江省地震监测预警中心</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">信息公开</a></li>
+                    <li><a href="#">震情动态</a></li>
+                    <li><a href="#">科普宣传</a></li>
+                    <li><a href="#">政务服务</a></li>
+                    <li><a href="#">震灾防御</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2>监测地球脉动，守护黑土家园</h2>
+                <p>黑龙江省地震局致力于地震监测预报、震灾防御和应急救援工作，为您提供权威的地震信息与科学指导。</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">查看震情信息</a>
+                    <a href="#" class="btn btn-outline">学习防震知识</a>
+                </div>
+            </div>
+            <div class="quick-alert-box">
+                <div class="alert-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    最新震情通报
+                </div>
+                <ul class="alert-list">
+                    <li>全国及全省地震趋势会商结果发布</li>
+                    <li>近期重点地区地震监测数据更新</li>
+                    <li>防震减灾科普知识普及活动通知</li>
+                    <li>地震应急预案演练指南发布</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心功能 -->
+    <section class="container">
+        <div class="section-title">
+            <h3>核心业务与服务</h3>
+            <p>全方位的防震减灾体系建设</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/></svg>
+                </div>
+                <h4>地震监测预报</h4>
+                <p>利用现代化监测网络，实时捕捉地震信号，科学分析震情趋势，提供短期预测与临震预报建议。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                </div>
+                <h4>震灾防御</h4>
+                <p>推进农村民居抗震设防，开展重大工程地震安全性评价，提升建筑抗震能力。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                </div>
+                <h4>地震应急救援</h4>
+                <p>建立快速响应机制，指导地震应急避难场所建设，开展应急救援演练，保障人民生命财产安全。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                </div>
+                <h4>科普宣传</h4>
+                <p>普及防震减灾科学知识，提升公众自救互救能力，营造全社会共同关注地震安全的良好氛围。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资讯与公告 -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>政务公开</h4>
+                    <ul class="info-list">
+                        <li><a href="#">政策法规：关于进一步加强地震安全农居建设的实施意见</a></li>
+                        <li><a href="#">规划计划：黑龙江省防震减灾“十四五”规划</a></li>
+                        <li><a href="#">统计信息：2023年度全省地震监测年报</a></li>
+                        <li><a href="#">人事信息：黑龙江省地震局关于干部任免的通知</a></li>
+                    </ul>
+                    <a href="#" style="display:block; margin-top:20px; color:var(--primary-color); font-weight:600;">查看更多政务公开 &rarr;</a>
+                </div>
+                <div class="info-card">
+                    <h4>震情速报</h4>
+                    <div class="data-table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>时间</th>
+                                    <th>地点</th>
+                                    <th>震级</th>
+                                    <th>状态</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2023-10-24 14:30</td>
+                                    <td>黑龙江省绥化市兰西县</td>
+                                    <td>3.0级</td>
+                                    <td><span class="status-badge status-normal">正常</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-10-23 09:15</td>
+                                    <td>黑龙江省齐齐哈尔市讷河市</td>
+                                    <td>2.5级</td>
+                                    <td><span class="status-badge status-normal">正常</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2023-10-21 22:40</td>
+                                    <td>吉林省松原市乾安县（边界）</td>
+                                    <td>2.8级</td>
+                                    <td><span class="status-badge status-warning">关注</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="#" style="display:block; margin-top:20px; color:var(--primary-color); font-weight:600;">查看历史震情数据 &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 防震指南 -->
+    <section class="container">
+        <div class="section-title">
+            <h3>防震减灾指南</h3>
+            <p>掌握科学避险知识，关键时刻能救命</p>
+        </div>
+        <div class="features-grid">
+            <article class="feature-card">
+                <h4>地震来了怎么办？</h4>
+                <p>室内：伏地、遮挡、手抓牢。迅速躲在结实家具旁或墙角，保护头部。室外：远离建筑物、大树、电线杆，前往开阔地带。</p>
+                <a href="#" style="color:var(--primary-color); margin-top:10px; display:inline-block;">阅读详细避险指南</a>
+            </article>
+            <article class="feature-card">
+                <h4>应急避难场所</h4>
+                <p>全省已建成多个国家级和省级应急避难场所，平时用于体育场馆、公园等，灾时可作为临时安置点。</p>
+                <a href="#" style="color:var(--primary-color); margin-top:10px; display:inline-block;">查询避难场所分布</a>
+            </article>
+            <article class="feature-card">
+                <h4>家庭应急包准备</h4>
+                <p>建议准备饮用水、食品、手电筒、急救药品、收音机、重要证件复印件等物品，放置在易取处。</p>
+                <a href="#" style="color:var(--primary-color); margin-top:10px; display:inline-block;">查看物资清单</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h5>黑龙江省地震局</h5>
+                    <p>地址：黑龙江省哈尔滨市南岗区学府路368号</p>
+                    <p>邮编：150080</p>
+                    <p>联系电话：0451-82669834</p>
+                </div>
+                <div class="footer-col">
+                    <h5>快速链接</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">国家地震局</a></li>
+                        <li><a href="#">中国地震台网</a></li>
+                        <li><a href="#">黑龙江省应急管理厅</a></li>
+                        <li><a href="#">政务服务平台</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>相关栏目</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">震情信息</a></li>
+                        <li><a href="#">科普宣传</a></li>
+                        <li><a href="#">执法监督</a></li>
+                        <li><a href="#">人事教育</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 黑龙江省地震局 版权所有 | 侵权必究</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
