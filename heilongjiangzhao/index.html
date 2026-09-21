@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑龙江肇东市 - 热点资讯、旅游攻略与政务便民服务指南</title>
+    <meta name="description" content="黑龙江肇东市官方网站导航，提供最新本地新闻、旅游美食推荐、便民政务服务查询及招商引资信息，展现松嫩平原明珠的独特魅力。">
+    <meta name="keywords" content="黑龙江肇东市, 肇东, 绥化, 望奎, 肇东旅游, 肇东美食, 肇东政务, 松嫩平原">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #0088cc;
+            --accent-color: #ff6b00;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: var(--text-dark);
+            color: var(--white);
+            font-size: 12px;
+            padding: 8px 0;
+            text-align: right;
+        }
+
+        .header-top span {
+            margin-left: 15px;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+            font-weight: 400;
+            margin-left: 5px;
+            font-size: 18px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 16px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 50%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.05);
+            transform: rotate(30deg);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .search-bar {
+            background: var(--white);
+            padding: 10px;
+            border-radius: 50px;
+            display: inline-flex;
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            flex: 1;
+            border-radius: 50px;
+            font-size: 16px;
+        }
+
+        .search-bar button {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .search-bar button:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Quick Links */
+        .quick-links {
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+            margin-bottom: 40px;
+        }
+
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .link-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .link-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .link-card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .link-card p {
+            font-size: 12px;
+            color: var(--text-gray);
+        }
+
+        /* Section Layout */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: var(--text-dark);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .section-more {
+            font-size: 14px;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        /* News Grid */
+        .news-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .news-list {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .news-item {
+            display: flex;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-date {
+            background: #f0f4f8;
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+            margin-right: 15px;
+            min-width: 60px;
+            height: fit-content;
+        }
+
+        .news-content h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        .news-content p {
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        .sidebar-box {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-box h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .hot-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .hot-list li:last-child {
+            border-bottom: none;
+        }
+
+        .hot-num {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .hot-list a {
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 200px;
+        }
+
+        /* Tourism Section */
+        .tourism-section {
+            background: #eef6fb;
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .tourism-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .tourism-card {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            height: 250px;
+            box-shadow: var(--shadow);
+            group: cursor;
+        }
+
+        .tourism-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .tourism-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .tourism-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: var(--white);
+        }
+
+        .tourism-overlay h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            margin-bottom: 60px;
+        }
+
+        .service-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid #eee;
+            transition: all 0.3s;
+        }
+
+        .service-item:hover {
+            border-color: var(--primary-color);
+            background: #f9fbff;
+        }
+
+        .service-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .service-name {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            .tourism-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                display: none;
+            }
+            .main-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .quick-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quick-links-grid {
+                grid-template-columns: 1fr;
+            }
+            .tourism-grid {
+                grid-template-columns: 1fr;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="header-top">
+        <span>欢迎访问黑龙江肇东市官方网站</span>
+        <span>联系电话：0455-XXXXXXX</span>
+        <span>电子邮箱：zhaodong@gov.cn</span>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="container main-header">
+            <div class="logo">
+                肇东市
+                <span>Zhaodong City</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">政务服务</a></li>
+                    <li><a href="#">文化旅游</a></li>
+                    <li><a href="#">招商投资</a></li>
+                    <li><a href="#">走进肇东</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>黑龙江肇东市</h1>
+            <p>中国北方著名的商品粮基地、乳肉生产基地和优质煤炭产区。松嫩平原上的璀璨明珠，欢迎您来此投资兴业、观光旅游。</p>
+            <div class="search-bar">
+                <input type="text" placeholder="请输入您想了解的内容，如：政务服务、旅游景点、招商政策...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <div class="container quick-links">
+        <div class="quick-links-grid">
+            <a href="#" class="link-card">
+                <span class="link-icon">🏛️</span>
+                <h3>政务服务</h3>
+                <p>一站式便民服务平台</p>
+            </a>
+            <a href="#" class="link-card">
+                <span class="link-icon">📊</span>
+                <h3>统计公报</h3>
+                <p>年度经济与社会发展数据</p>
+            </a>
+            <a href="#" class="link-card">
+                <span class="link-icon">🌾</span>
+                <h3>农业资讯</h3>
+                <p>粮食生产与乡村振兴</p>
+            </a>
+            <a href="#" class="link-card">
+                <span class="link-icon">🏨</span>
+                <h3>旅游指南</h3>
+                <p>最美肇东景点推荐</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- News Section -->
+        <section class="news-section">
+            <div class="section-header">
+                <h2 class="section-title">今日肇东</h2>
+                <a href="#" class="section-more">查看更多新闻 &gt;</a>
+            </div>
+            <div class="news-grid">
+                <div class="news-list">
+                    <div class="news-item">
+                        <div class="news-date">10-24</div>
+                        <div class="news-content">
+                            <h4><a href="#">肇东市召开全市招商引资大会 擘画高质量发展新蓝图</a></h4>
+                            <p>会议强调要坚持以招商引资为突破口，优化营商环境，推动全市经济实现稳中求进...</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">10-23</div>
+                        <div class="news-content">
+                            <h4><a href="#">农业农村部调研组莅临肇东检查指导高标准农田建设工作</a></h4>
+                            <p>调研组实地查看了肇东市部分乡镇的农田水利设施，对肇东在粮食生产方面的成就给予高度评价...</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">10-22</div>
+                        <div class="news-content">
+                            <h4><a href="#">肇东市举办首届文化旅游节 吸引八方宾客共赏松嫩风光</a></h4>
+                            <p>文化节期间将举办特色美食展、非遗项目展示以及民俗表演等活动，进一步打响“肇东”城市品牌...</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">10-21</div>
+                        <div class="news-content">
+                            <h4><a href="#">我市与某知名乳业集团签署战略合作协议</a></h4>
+                            <p>根据协议，双方将在奶牛养殖、乳制品深加工等领域开展深度合作，预计将带动当地就业上千人...</p>
+                        </div>
+                    </div>
+                </div>
+                <aside>
+                    <div class="sidebar-box">
+                        <h4>热点排行</h4>
+                        <ul class="hot-list">
+                            <li><span class="hot-num">1</span><a href="#">肇东市2023年国民经济和社会发展统计公报</a></li>
+                            <li><span class="hot-num">2</span><a href="#">关于进一步优化营商环境的通知</a></li>
+                            <li><span class="hot-num">3</span><a href="#">肇东市最新公交线路调整公告</a></li>
+                            <li><span class="hot-num">4</span><a href="#">我市成功入选全国农业现代化示范区创建名单</a></li>
+                            <li><span class="hot-num">5</span><a href="#">肇东市2024年义务教育阶段招生政策解读</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Tourism Section -->
+        <section class="tourism-section">
+            <div class="section-header">
+                <h2 class="section-title">美丽肇东</h2>
+                <a href="#" class="section-more">更多旅游资讯 &gt;</a>
+            </div>
+            <div class="tourism-grid">
+                <article class="tourism-card">
+                    <img src="https://picsum.photos/seed/zhao1/400/300" alt="肇东西郊公园">
+                    <div class="tourism-overlay">
+                        <h3>西郊公园</h3>
+                        <p>城市绿肺，休闲健身好去处</p>
+                    </div>
+                </article>
+                <article class="tourism-card">
+                    <img src="https://picsum.photos/seed/zhao2/400/300" alt="肇东万福隆广场">
+                    <div class="tourism-overlay">
+                        <h3>万福隆广场</h3>
+                        <p>城市地标，繁华商业中心</p>
+                    </div>
+                </article>
+                <article class="tourism-card">
+                    <img src="https://picsum.photos/seed/zhao3/400/300" alt="沿江风光带">
+                    <div class="tourism-overlay">
+                        <h3>沿江风光带</h3>
+                        <p>松嫩两江交汇处的自然美景</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <div class="section-header">
+                <h2 class="section-title">便民服务</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">🆔</div>
+                    <div class="service-name">身份证办理</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🚗</div>
+                    <div class="service-name">车辆违章查询</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🏠</div>
+                    <div class="service-name">房屋产权查询</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">💰</div>
+                    <div class="service-name">社保查询缴费</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🎓</div>
+                    <div class="service-name">公积金服务</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">⚖️</div>
+                    <div class="service-name">法律援助咨询</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>肇东市人民政府</h2>
+                    <p>地址：黑龙江省绥化市肇东市行政中心<br>邮编：151100<br>电话：0455-1234567</p>
+                </div>
+                <div class="footer-col">
+                    <h3>政务公开</h3>
+                    <ul>
+                        <li><a href="#">政府信息公开指南</a></li>
+                        <li><a href="#">政府信息公开制度</a></li>
+                        <li><a href="#">法定主动公开内容</a></li>
+                        <li><a href="#">依申请公开</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>专题专栏</h3>
+                    <ul>
+                        <li><a href="#">党史学习教育</a></li>
+                        <li><a href="#">优化营商环境</a></li>
+                        <li><a href="#">扫黑除恶斗争</a></li>
+                        <li><a href="#">数字政府建设</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>友情链接</h3>
+                    <ul>
+                        <li><a href="#">黑龙江省人民政府</a></li>
+                        <li><a href="#">绥化市人民政府</a></li>
+                        <li><a href="#">中国政府网</a></li>
+                        <li><a href="#">中国·肇东</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2024 肇东市人民政府 版权所有 | 黑ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                      </html>
