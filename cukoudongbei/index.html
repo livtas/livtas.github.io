@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粗口东北二人转 - 经典搞笑二人转大全与在线观看</title>
+    <meta name="description" content="粗口东北二人转专题页面，汇集经典搞笑二人转段子、小品视频及幕后花絮。提供高清在线观看、演员介绍及二人转文化解析，满足您对民间传统艺术的娱乐需求。">
+    <meta name="keywords" content="粗口东北二人转,二人转,东北小品,民间艺术,搞笑视频,赵本山,刘能">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #fbc02d;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f4f4f4;
+            --text-main: #333;
+            --text-light: #666;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--dark-bg);
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/errenzhuan/1600/600') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .hero-btn:hover {
+            background-color: #b71c1c;
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        /* Content Area */
+        .section-title {
+            font-size: 22px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .thumbnail {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #000;
+        }
+
+        .thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #fff;
+        }
+
+        .play-icon::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 14px solid #fff;
+            margin-left: 4px;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-info {
+            font-size: 13px;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Sidebar */
+        aside .widget {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .tags-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .tag:hover {
+            background-color: var(--secondary-color);
+            color: #000;
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 12px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #ffd700; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #c0c0c0; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #cd7f32; }
+
+        .rank-title {
+            font-size: 14px;
+            flex-grow: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background-color: #fff;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-content h2 {
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .intro-content p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: #999;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+        }
+
+        .copyright {
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 15px;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark-bg);
+                padding: 20px;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12"/><path d="M6 9h12"/><path d="M6 15h12"/><path d="M6 21h12"/></svg>
+            <span>二人转</span>世界
+        </a>
+        <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">经典段子</a></li>
+                <li><a href="#">明星专场</a></li>
+                <li><a href="#">幕后花絮</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>粗口东北二人转</h1>
+    <p>领略东北民间艺术的幽默与激情，观看最地道的二人转表演，感受浓厚的黑土地文化。</p>
+    <a href="#latest" class="hero-btn">开始观看</a>
+</section>
+
+<div class="intro-section">
+    <div class="intro-content">
+        <h2>什么是东北二人转？</h2>
+        <p>东北二人转，旧称“蹦蹦”，是中国东北地区的传统曲艺形式。它以滑稽幽默的语言、夸张的动作和浓郁的地方特色著称。虽然包含一些“粗口”元素，但其核心是反映生活、讽刺现实、传递欢乐。</p>
+        <p>本站精选了最具代表性的二人转片段，涵盖经典小品、民间小调及现场演出录像，为您提供最纯粹的娱乐体验。</p>
+    </div>
+</div>
+
+<main class="container" id="latest">
+    <section class="content-area">
+        <div class="section-title">
+            <h3>最新热门视频</h3>
+            <a href="#">查看更多 &gt;</a>
+        </div>
+        
+        <div class="video-grid">
+            <!-- Card 1 -->
+            <article class="video-card">
+                <a href="#" class="thumbnail">
+                    <img src="https://picsum.photos/seed/turn1/400/225" alt="二人转视频缩略图">
+                    <div class="play-icon"></div>
+                </a>
+                <div class="card-content">
+                    <h4 class="card-title">经典二人转《大西厢》选段：王小二过年</h4>
+                    <div class="card-info">
+                        <span>播放: 12.5万</span>
+                        <span>更新: 2023-10</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="video-card">
+                <a href="#" class="thumbnail">
+                    <img src="https://picsum.photos/seed/turn2/400/225" alt="二人转视频缩略图">
+                    <div class="play-icon"></div>
+                </a>
+                <div class="card-content">
+                    <h4 class="card-title">赵本山徒弟高秀敏经典小品回顾</h4>
+                    <div class="card-info">
+                        <span>播放: 8.2万</span>
+                        <span>更新: 2023-09</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="video-card">
+                <a href="#" class="thumbnail">
+                    <img src="https://picsum.photos/seed/turn3/400/225" alt="二人转视频缩略图">
+                    <div class="play-icon"></div>
+                </a>
+                <div class="card-content">
+                    <h4 class="card-title">民间草台班子：地摊二人转现场</h4>
+                    <div class="card-info">
+                        <span>播放: 5.1万</span>
+                        <span>更新: 2023-11</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="video-card">
+                <a href="#" class="thumbnail">
+                    <img src="https://picsum.photos/seed/turn4/400/225" alt="二人转视频缩略图">
+                    <div class="play-icon"></div>
+                </a>
+                <div class="card-content">
+                    <h4 class="card-title">东北秧歌与二人转的融合表演</h4>
+                    <div class="card-info">
+                        <span>播放: 3.8万</span>
+                        <span>更新: 2023-08</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="video-card">
+                <a href="#" class="thumbnail">
+                    <img src="https://picsum.photos/seed/turn5/400/225" alt="二人转视频缩略图">
+                    <div class="play-icon"></div>
+                </a>
+                <div class="card-content">
+                    <h4 class="card-title">喜剧大师宋小宝：二人转专场</h4>
+                    <div class="card-info">
+                        <span>播放: 22.4万</span>
+                        <span>更新: 2023-12</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="video-card">
+                <a href="#" class="thumbnail">
+                    <img src="https://picsum.photos/seed/turn6/400/225" alt="二人转视频缩略图">
+                    <div class="play-icon"></div>
+                </a>
+                <div class="card-content">
+                    <h4 class="card-title">传统手绢花技巧展示</h4>
+                    <div class="card-info">
+                        <span>播放: 1.2万</span>
+                        <span>更新: 2023-07</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <aside class="sidebar">
+        <div class="widget">
+            <h4 style="margin-bottom: 15px; border-bottom: 2px solid var(--secondary-color); display:inline-block; padding-bottom:5px;">热门标签</h4>
+            <div class="tags-cloud">
+                <a href="#" class="tag">二人转</a>
+                <a href="#" class="tag">东北小品</a>
+                <a href="#" class="tag">赵本山</a>
+                <a href="#" class="tag">宋小宝</a>
+                <a href="#" class="tag">刘能</a>
+                <a href="#" class="tag">谢广坤</a>
+                <a href="#" class="tag">郭德纲</a>
+                <a href="#" class="tag">民间艺术</a>
+            </div>
+        </div>
+
+        <div class="widget">
+            <h4 style="margin-bottom: 15px; border-bottom: 2px solid var(--secondary-color); display:inline-block; padding-bottom:5px;">本周排行</h4>
+            <ul class="rank-list">
+                <li>
+                    <span class="rank-num">1</span>
+                    <a href="#" class="rank-title">赵本山经典小品全集</a>
+                </li>
+                <li>
+                    <span class="rank-num">2</span>
+                    <a href="#" class="rank-title">二人转《小拜年》高清</a>
+                </li>
+                <li>
+                    <span class="rank-num">3</span>
+                    <a href="#" class="rank-title">民间草台班子现场</a>
+                </li>
+                <li>
+                    <span class="rank-num">4</span>
+                    <a href="#" class="rank-title">东北大秧歌汇演</a>
+                </li>
+                <li>
+                    <span class="rank-num">5</span>
+                    <a href="#" class="rank-title">宋小宝搞笑合集</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="widget">
+            <h4 style="margin-bottom: 15px; border-bottom: 2px solid var(--secondary-color); display:inline-block; padding-bottom:5px;">文化科普</h4>
+            <p style="font-size: 13px; color: #666; line-height: 1.8;">
+                二人转源于民间，具有极强的表演性和娱乐性。虽然表演中常包含一些方言俚语和幽默的“粗口”，但这正是其接地气、真实生动的体现。观看时请根据个人喜好选择内容。
+            </p>
+        </div>
+    </aside>
+</main>
+
+<footer>
+    <div class="footer-links">
+        <a href="#">关于本站</a>
+        <a href="#">免责声明</a>
+        <a href="#">联系方式</a>
+        <a href="#">隐私政策</a>
+    </div>
+    <p class="copyright">Copyright © 2023 二人转世界 - 粗口东北二人转精选站</p>
+    <p class="copyright" style="margin-top: 10px; font-size: 12px; color: #666;">本站内容仅供娱乐参考，请文明观看。</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        var nav = document.getElementById('main-nav');
+        nav.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
