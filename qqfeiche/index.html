@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qq飞车紫钻-紫钻特权详解、充值入口与等级特权指南</title>
+    <meta name="description" content="本站提供QQ飞车紫钻等级划分、特权内容详解、充值入口及注意事项。了解紫钻会员能获得哪些专属赛车、道具、皮肤及经验加成，掌握紫钻充值优惠与权益最大化攻略。">
+    <meta name="keywords" content="qq飞车紫钻,QQ飞车会员,紫钻特权,QQ飞车充值,QQ飞车等级">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-purple: #8a2be2;
+            --dark-purple: #5e189a;
+            --light-purple: #f3e5f5;
+            --accent-gold: #ffd700;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f9f9f9;
+            --bg-card: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(138, 43, 226, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--dark-purple);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-purple);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(138, 43, 226, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #1a0b2e 0%, #4a148c 100%);
+            color: white;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #e1bee7;
+        }
+
+        /* Content Layout */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-purple);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            border-top: 4px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--primary-purple);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: var(--dark-purple);
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        /* Levels Table */
+        .levels-container {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .level-row {
+            display: flex;
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+        .level-row:last-child {
+            border-bottom: none;
+        }
+
+        .level-row:hover {
+            background: #fafafa;
+        }
+
+        .level-rank {
+            width: 150px;
+            padding: 20px;
+            background: var(--light-purple);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: var(--dark-purple);
+            font-size: 18px;
+        }
+
+        .level-rank small {
+            font-size: 12px;
+            font-weight: normal;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+
+        .level-details {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .level-details h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .level-details p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .level-rewards {
+            width: 200px;
+            padding: 20px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .reward-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #555;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* FAQ Section */
+        .faq-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--primary-purple);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #aaa;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-purple);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+            .level-row {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .level-rank {
+                width: 100%;
+                flex-direction: row;
+                gap: 10px;
+                padding: 15px;
+            }
+            .level-details, .level-rewards {
+                width: 100%;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>Q</span>飞车紫钻
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features" class="active">特权介绍</a></li>
+                    <li><a href="#levels">等级特权</a></li>
+                    <li><a href="#guide">充值指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-btn">立即开通</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-badges">
+                    <span class="badge">专属赛车</span>
+                    <span class="badge">经验加成</span>
+                    <span class="badge">顶级皮肤</span>
+                </div>
+                <h1>QQ飞车紫钻特权一览</h1>
+                <p>成为QQ飞车紫钻会员，解锁专属赛车、道具、经验加成及每日福利，享受尊贵玩家体验。</p>
+                <a href="#" class="cta-btn" style="background: white; color: var(--dark-purple);">查看充值入口</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>紫钻核心特权</h2>
+                    <p>全面提升您的游戏体验，不仅仅是外观，更是实力的象征</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🏎️</div>
+                        <h3>专属炫酷赛车</h3>
+                        <p>紫钻会员可定期获得紫钻专属赛车，这些车辆通常拥有独特的外观设计和稀有属性，是身份的象征。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>经验值加成</h3>
+                        <p>开启紫钻特权后，每日获得的经验值将大幅提升，助您快速升级，解锁更多游戏内容。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🎁</div>
+                        <h3>每日福利礼包</h3>
+                        <p>每天登录游戏即可领取紫钻专属礼包，包含稀有道具、金币或经验卡，持续累积收益。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">💎</div>
+                        <h3>商城折扣特权</h3>
+                        <p>在游戏商城购买道具时，紫钻用户通常享有更高的折扣力度，长期消费更划算。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🎭</div>
+                        <h3>顶级装扮皮肤</h3>
+                        <p>获得限定版发型、服饰和宠物皮肤，让您在赛道上成为最靓的仔。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>高级保护特权</h3>
+                        <p>紫钻用户拥有更强的装备保护能力，防止被他人恶搞或破坏，保障游戏公平体验。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Levels Section -->
+        <section id="levels" class="section" style="background-color: #f4f0fa;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>紫钻等级特权</h2>
+                    <p>不同等级对应不同的权益，等级越高，特权越丰厚</p>
+                </div>
+                <div class="levels-container">
+                    <!-- Level 1 -->
+                    <div class="level-row">
+                        <div class="level-rank">LV.1 <small>紫钻</small></div>
+                        <div class="level-details">
+                            <h4>基础入门</h4>
+                            <p>每日登录礼包、商城9.5折优惠、经验加成10%。</p>
+                        </div>
+                        <div class="level-rewards">
+                            <span class="reward-tag">经验卡x1</span>
+                            <span class="reward-tag">金币x1000</span>
+                        </div>
+                    </div>
+                    <!-- Level 2 -->
+                    <div class="level-row">
+                        <div class="level-rank">LV.2 <small>黄金紫钻</small></div>
+                        <div class="level-details">
+                            <h4>进阶享受</h4>
+                            <p>商城9.6折优惠、经验加成20%、专属头像框。</p>
+                        </div>
+                        <div class="level-rewards">
+                            <span class="reward-tag">高级经验卡</span>
+                            <span class="reward-tag">钻石x500</span>
+                        </div>
+                    </div>
+                    <!-- Level 3 -->
+                    <div class="level-row">
+                        <div class="level-rank">LV.3 <small>铂金紫钻</small></div>
+                        <div class="level-details">
+                            <h4>尊贵享受</h4>
+                            <p>商城9.7折优惠、经验加成30%、专属称号。</p>
+                        </div>
+                        <div class="level-rewards">
+                            <span class="reward-tag">稀有道具</span>
+                            <span class="reward-tag">双倍卡x1</span>
+                        </div>
+                    </div>
+                    <!-- Level 4 -->
+                    <div class="level-row">
+                        <div class="level-rank">LV.4 <small>钻石紫钻</small></div>
+                        <div class="level-details">
+                            <h4>顶级尊享</h4>
+                            <p>商城9.8折优惠、经验加成50%、专属限量皮肤。</p>
+                        </div>
+                        <div class="level-rewards">
+                            <span class="reward-tag">限定赛车</span>
+                            <span class="reward-tag">至尊宝箱</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <p>关于QQ飞车紫钻的疑问，这里都有答案</p>
+                </div>
+                <div class="faq-wrapper">
+                    <div class="faq-item">
+                        <div class="faq-question">如何开通QQ飞车紫钻？</div>
+                        <div class="faq-answer">
+                            您可以通过腾讯QQ客户端内的“超级会员”或“黄钻/红钻”入口开通。通常在QQ客户端的“我的特权”或“游戏特权”中找到QQ飞车紫钻的开通入口，选择相应的等级套餐进行支付即可。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">紫钻过期后特权会立即失效吗？</div>
+                        <div class="faq-answer">
+                            是的，当紫钻会员资格过期后，相关的加成效果（如经验加成、商城折扣）将立即停止生效。同时，过期期间每日领取的福利礼包将无法补领。建议设置自动续费以保持特权持续。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">紫钻等级和QQ会员等级有什么关系？</div>
+                        <div class="faq-answer">
+                            QQ飞车紫钻等级通常与QQ超级会员等级挂钩。超级会员等级越高，通常可以开通或提升的QQ飞车紫钻等级也越高。具体对应关系请以游戏内最新规则为准。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">专属赛车可以在非紫钻时间使用吗？</div>
+                        <div class="faq-answer">
+                            通常情况下，紫钻专属赛车仅在开通紫钻期间可以使用。如果紫钻过期，车辆通常会从您的车库中移除或无法再次使用，直到您重新续费开通紫钻。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于紫钻</h4>
+                    <ul>
+                        <li><a href="#">紫钻开通指南</a></li>
+                        <li><a href="#">等级特权说明</a></li>
+                        <li><a href="#">充值优惠活动</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏帮助</h4>
+                    <ul>
+                        <li><a href="#">新手入门教程</a></li>
+                        <li><a href="#">赛事规则介绍</a></li>
+                        <li><a href="#">车辆改装攻略</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">用户反馈</a></li>
+                        <li><a href="#">客服中心</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 QQ飞车紫钻特权指南站. 本站为玩家攻略与资讯整理，非腾讯官方页面。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+
+            // 导航栏滚动效果
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+                } else {
+                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
