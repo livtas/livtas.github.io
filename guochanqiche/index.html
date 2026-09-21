@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2024年最新国产汽车销量排行榜数据，涵盖新能源汽车、燃油车及各品牌市场份额分析。为您提供实时、客观的汽车市场销量报告与购车参考。">
+    <meta name="keywords" content="国产汽车销量排行榜,中国汽车销量,新能源汽车销量,汽车品牌排行榜,汽车市场分析">
+    <title>国产汽车销量排行榜-2024最新市场数据与品牌排名</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e60012;
+            --primary-hover: #b3000f;
+            --secondary-color: #1a1a1a;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f4f6f9;
+            --bg-card: #ffffff;
+            --border-color: #e0e0e0;
+            --accent-green: #28a745;
+            --accent-blue: #007bff;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .header-actions button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 24px var(--spacing-unit);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            color: white;
+            padding: 48px 24px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-item h3 {
+            font-size: 24px;
+            color: var(--accent-green);
+        }
+
+        .stat-item p {
+            font-size: 12px;
+            opacity: 0.7;
+            margin: 0;
+        }
+
+        /* Filter Tabs */
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Table Styles */
+        .table-container {
+            background: var(--bg-card);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #fcfcfc;
+        }
+
+        /* Rank Styles */
+        .rank {
+            font-weight: 700;
+            width: 60px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .rank-1 { color: #ffd700; }
+        .rank-2 { color: #c0c0c0; }
+        .rank-3 { color: #cd7f32; }
+
+        .brand-cell {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            background-color: #eee;
+            object-fit: cover;
+            display: block;
+        }
+
+        .brand-info h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .brand-info span {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Data Indicators */
+        .trend-up { color: var(--accent-green); font-size: 12px; display: flex; align-items: center; gap: 4px; }
+        .trend-down { color: var(--primary-color); font-size: 12px; display: flex; align-items: center; gap: 4px; }
+        .trend-flat { color: var(--text-secondary); font-size: 12px; }
+
+        .market-share-bar {
+            width: 100px;
+            height: 6px;
+            background-color: #eee;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .market-share-fill {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        /* Info Section */
+        .info-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .info-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .analysis-list li {
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .analysis-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .analysis-list strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--text-main);
+        }
+
+        .analysis-list p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .tips-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .tip-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .tip-item h4 {
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: var(--text-main);
+        }
+
+        .tip-item p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            margin-top: 48px;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            margin: 0 8px;
+            color: var(--text-main);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 12px;
+                gap: 12px;
+            }
+            nav ul {
+                gap: 12px;
+                font-size: 13px;
+            }
+            .hero h1 {
+                font-size: 24px;
+            }
+            .hero-stats {
+                gap: 20px;
+            }
+            th, td {
+                padding: 12px 8px;
+            }
+            .brand-cell {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .market-share-bar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <span>车市榜</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">销量排行榜</a></li>
+                <li><a href="#">品牌分析</a></li>
+                <li><a href="#">新能源</a></li>
+                <li><a href="#">资讯中心</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button>数据订阅</button>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>2024年国产汽车销量排行榜</h1>
+            <p>基于最新终端上险数据，深度解析中国品牌市场份额与增长趋势。从传统燃油到纯电、混动，全方位洞察国产汽车市场格局。</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>15.8%</h3>
+                    <p>自主品牌市场份额</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4,050,000+</h3>
+                    <p>本月国产汽车总销量</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>上榜品牌数量</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-bar">
+        <button class="filter-btn active" onclick="filterData('all', this)">全部品牌</button>
+        <button class="filter-btn" onclick="filterData('newenergy', this)">新能源</button>
+        <button class="filter-btn" onclick="filterData('suv', this)">SUV</button>
+        <button class="filter-btn" onclick="filterData('sedan', this)">轿车</button>
+    </section>
+
+    <!-- Data Table -->
+    <section class="table-container">
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="60">排名</th>
+                        <th width="250">品牌名称</th>
+                        <th>本月销量 (辆)</th>
+                        <th>同比变化</th>
+                        <th>市场份额</th>
+                        <th width="120">趋势</th>
+                    </tr>
+                </thead>
+                <tbody id="rankingBody">
+                    <!-- Data will be populated by JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section class="info-section">
+        <article class="card">
+            <h2>市场洞察与趋势分析</h2>
+            <ul class="analysis-list">
+                <li>
+                    <strong>新能源汽车领跑增长</strong>
+                    <p>在补贴退坡与市场成熟的双重作用下，自主品牌新能源车型销量持续攀升，比亚迪、吉利银河等品牌成为主要增长极。</p>
+                </li>
+                <li>
+                    <strong>出口量创历史新高</strong>
+                    <p>除了国内市场，中国品牌在海外市场的表现同样亮眼，出口销量同比增长超过40%，成为行业新的增长点。</p>
+                </li>
+                <li>
+                    <strong>智能化成为竞争核心</strong>
+                    <p>在销量榜单中，具备高阶智驾系统和智能座舱能力的车型，往往能获得更高的用户口碑和溢价能力。</p>
+                </li>
+                <li>
+                    <strong>价格战常态化</strong>
+                    <p>为了争夺市场份额，头部品牌纷纷推出高性价比的改款车型，入门级价格下探明显，加速了市场优胜劣汰。</p>
+                </li>
+            </ul>
+        </article>
+
+        <aside class="card">
+            <h2>购车建议与注意事项</h2>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <h4>关注保值率</h4>
+                    <p>购买前可参考三年保值率数据，传统燃油车与新能源车在保值率上存在明显差异。</p>
+                </div>
+                <div class="tip-item">
+                    <h4>试驾体验</h4>
+                    <p>建议进行多次试驾，重点体验车辆在拥堵路况下的平顺性及高速巡航的稳定性。</p>
+                </div>
+                <div class="tip-item">
+                    <h4>政策匹配</h4>
+                    <p>了解所在城市的限购限行政策及新能源补贴政策，确保购车后能顺利上牌用车。</p>
+                </div>
+                <div class="tip-item">
+                    <h4>维护成本</h4>
+                    <p>纯电车型需关注电池质保条款及后期充电设施便利性，油混车型则需关注燃油经济性。</p>
+                </div>
+            </div>
+        </aside>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">数据来源</a>
+            <a href="#">免责声明</a>
+            <a href="#">联系方式</a>
+        </div>
+        <p>Copyright © 2024 车市榜 - 专注国产汽车市场数据研究</p>
+        <p style="font-size: 12px; margin-top: 8px; color: #999;">本网站数据仅供参考，具体销量以厂家公布为准。</p>
+    </div>
+</footer>
+
+<script>
+    // 模拟数据：国产汽车销量排行榜
+    const carData = [
+        { rank: 1, brand: "比亚迪", sales: 345000, change: 35.2, market: 8.5, trend: "up", type: "newenergy" },
+        { rank: 2, brand: "吉利汽车", sales: 125000, change: 12.5, market: 3.1, trend: "up", type: "all" },
+        { rank: 3, brand: "长安汽车", sales: 118000, change: -2.4, market: 2.9, trend: "down", type: "all" },
+        { rank: 4, brand: "奇瑞汽车", sales: 98000, change: 8.7, market: 2.4, trend: "up", type: "all" },
+        { rank: 5, brand: "上汽通用五菱", sales: 95000, change: 1.2, market: 2.3, trend: "flat", type: "all" },
+        { rank: 6, brand: "广汽埃安", sales: 89000, change: 45.6, market: 2.2, trend: "up", type: "newenergy" },
+        { rank: 7, brand: "理想汽车", sales: 76000, change: 28.9, market: 1.9, trend: "up", type: "newenergy" },
+        { rank: 8, brand: "蔚来汽车", sales: 54000, change: -5.3, market: 1.3, trend: "down", type: "newenergy" },
+        { rank: 9, brand: "长城汽车", sales: 52000, change: -8.1, market: 1.3, trend: "down", type: "all" },
+        { rank: 10, brand: "小鹏汽车", sales: 48000, change: 15.4, market: 1.2, trend: "up", type: "newenergy" },
+        { rank: 11, brand: "一汽-大众", sales: 46000, change: -10.2, market: 1.1, trend: "down", type: "all" },
+        { rank: 12, brand: "广汽传祺", sales: 44000, change: 4.5, market: 1.1, trend: "up", type: "all" },
+        { rank: 13, brand: "零跑汽车", sales: 39000, change: 22.1, market: 1.0, trend: "up", type: "newenergy" },
+        { rank: 14, brand: "问界", sales: 36000, change: 120.5, market: 0.9, trend: "up", type: "newenergy" },
+        { rank: 15, brand: "深蓝", sales: 34000, change: 35.0, market: 0.8, trend: "up", type: "newenergy" },
+    ];
+
+    // 渲染表格函数
+    function renderTable(data) {
+        const tbody = document.getElementById('rankingBody');
+        tbody.innerHTML = '';
+
+        data.forEach(item => {
+            const tr = document.createElement('tr');
+            
+            // 趋势图标
+            let trendIcon = '';
+            if (item.trend === 'up') trendIcon = '<span class="trend-up">↑ ' + item.change + '%</span>';
+            else if (item.trend === 'down') trendIcon = '<span class="trend-down">↓ ' + Math.abs(item.change) + '%</span>';
+            else trendIcon = '<span class="trend-flat">- 0%</span>';
+
+            // 排名样式
+            let rankClass = 'rank';
+            if (item.rank === 1) rankClass += ' rank-1';
+            else if (item.rank === 2) rankClass += ' rank-2';
+            else if (item.rank === 3) rankClass += ' rank-3';
+
+            // 品牌Logo占位符 (使用picsum作为占位，实际项目中应使用真实logo)
+            const logoUrl = `https://picsum.photos/seed/${item.brand.replace(/\s/g, '')}/40/40`;
+
+            tr.innerHTML = `
+                <td class="${rankClass}">${item.rank}</td>
+                <td>
+                    <div class="brand-cell">
+                        <img src="${logoUrl}" alt="${item.brand} Logo" class="brand-logo">
+                        <div class="brand-info">
+                            <h4>${item.brand}</h4>
+                            <span>自主品牌</span>
+                        </div>
+                    </div>
+                </td>
+                <td><strong>${item.sales.toLocaleString()}</strong></td>
+                <td>${trendIcon}</td>
+                <td>
+                    <div style="font-size: 12px; margin-bottom: 2px;">${item.market}%</div>
+                    <div class="market-share-bar">
+                        <div class="market-share-fill" style="width: ${item.market * 3}%"></div>
+                    </div>
+                </td>
+                <td>${trendIcon}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    // 筛选功能
+    function filterData(type, btn) {
+        // 更新按钮状态
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // 筛选逻辑
+        if (type === 'all') {
+            renderTable(carData);
+        } else {
+            const filtered = carData.filter(item => item.type === type);
+            renderTable(filtered);
+        }
+    }
+
+    // 初始化渲染
+    document.addEventListener('DOMContentLoaded', () => {
+        renderTable(carData);
+    });
+</script>
+
+</body>
+</html>
